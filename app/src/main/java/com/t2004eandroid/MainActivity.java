@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         bay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editText.setText(editText.getText() + "bay");
+                editText.setText(editText.getText() + "7");
             }
         });
         tam.setOnClickListener(new View.OnClickListener() {
