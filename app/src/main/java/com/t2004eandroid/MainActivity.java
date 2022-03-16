@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView khong, mot, hai, ba, bon, nam,sau, bay, tam, chin, cham, c, cong, tru, nhan, chia, bang;
     private EditText editText;
 
-    private float mValueOne, mValueTwo;
+    private float soThuNhat, soThuHai;
     private boolean phepCong, phepTru,phepNhan, phepChia;
 
     @Override
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 if (editText == null){
                     editText.setText("");
                 }else {
-                    mValueOne = Float.parseFloat(editText.getText() + "");
+                    soThuNhat = Float.parseFloat(editText.getText() + "");
                     phepCong = true;
                     editText.setText(null);
                 }
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         tru.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mValueOne = Float.parseFloat(editText.getText() + "");
+                soThuNhat = Float.parseFloat(editText.getText() + "");
                 phepTru = true;
                 editText.setText(null);
             }
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         nhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mValueOne = Float.parseFloat(editText.getText() + "");
+                soThuNhat = Float.parseFloat(editText.getText() + "");
                 phepNhan = true;
                 editText.setText(null);
             }
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         chia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mValueOne = Float.parseFloat(editText.getText() + "");
+                soThuNhat = Float.parseFloat(editText.getText() + "");
                 phepChia = true;
                 editText.setText(null);
             }
@@ -142,25 +142,25 @@ public class MainActivity extends AppCompatActivity {
         bang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mValueTwo = Float.parseFloat(editText.getText()+ "");
+                soThuHai = Float.parseFloat(editText.getText()+ "");
 
                 if(phepCong == true) {
-                    editText.setText(mValueOne + mValueTwo + "");
+                    editText.setText(soThuNhat + soThuHai + "");
                     phepCong = false;
                 }
 
                 if (phepTru == true) {
-                    editText.setText(mValueOne - mValueTwo + "");
+                    editText.setText(soThuNhat - soThuHai + "");
                     phepTru = false;
                 }
 
                 if(phepNhan == true) {
-                    editText.setText(mValueOne * mValueTwo + "");
+                    editText.setText(soThuNhat * soThuHai + "");
                     phepNhan = false;
                 }
 
                 if(phepChia == true) {
-                    editText.setText(mValueOne / mValueTwo + "");
+                    editText.setText(soThuNhat / soThuHai + "");
                     phepChia = false;
                 }
             }
